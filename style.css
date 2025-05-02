@@ -30,21 +30,31 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(images/pattern-background-desktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
+}
+@media screen and (max-width: 400px) {
+  .background{
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+  
+}
+
+@media screen and (min-width: 401px) {
+  .background{
+    background-image: url(images/pattern-background-desktop.svg);
+  }
+  
 }
 
 .card{
   width: 350px;
   background-color: white;
-  border-radius: 20px;
-  height: 90%;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -86,6 +96,7 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding: 10px 0;
 }
 .plan-info h2{
   font-weight: 900;
@@ -114,7 +125,7 @@ button{
   background-color: var(--Brightblue);
   border: none;
   padding: 15px 0;
-  margin: 1rem;
+  margin: 1.5rem;
   border-radius: 10px;
   color: white;
   font-weight: 700;
@@ -131,7 +142,7 @@ button:hover{
   text-decoration: none;
   color: var(--Desaturatedblue);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   &:hover{
     color: var(--Darkblue);
   }
